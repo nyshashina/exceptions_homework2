@@ -1,7 +1,7 @@
 package task3;
 
 public class main {
-    public static void main(String[] args)  throws Exception {
+    public static void main(String[] args) {
         try {
             int a = 90;
             int b = 3;
@@ -14,7 +14,7 @@ public class main {
             System.out.println("Указатель не может указывать на null!");
         } catch (IndexOutOfBoundsException ex) {
             System.out.println("Массив выходит за пределы своего размера!");
-        }catch (Throwable ex) {
+        } catch (Throwable ex) {
             System.out.println("Что-то пошло не так...");
         }
     }

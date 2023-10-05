@@ -1,5 +1,6 @@
 package task1;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 // Реализуйте метод, который запрашивает у пользователя ввод дробного
@@ -8,19 +9,20 @@ import java.util.Scanner;
 // повторно запросить у пользователя ввод данных.
 public class Main {
 
-    public static void main(String[] args) throws Exception {
-        while (true){
+    public static void main(String[] args) {
+        while (true) {
             System.out.println("Введите число:");
             printFloat();
-            }
-    }
-        public static void printFloat() throws Exception {
-            Scanner scanner = new Scanner(System.in);
-            try {
-                float f = scanner.nextFloat();
-                System.out.println(f);
-            } catch (Exception e){
-                System.out.println("Невозможно преобразовать в число.");
-            }
         }
+    }
+
+    public static void printFloat() {
+        Scanner scanner = new Scanner(System.in);
+        try {
+            float f = scanner.nextFloat();
+            System.out.println(f);
+        } catch (InputMismatchException e){
+            System.out.println("Невозможно преобразовать в число.");
+        }
+    }
 }
